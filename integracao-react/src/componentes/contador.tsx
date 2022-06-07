@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ContadorValor from "./contadorValor";
+import logRender from '../decorators/logRender'
 
 
 interface ContadorProps {
@@ -9,6 +10,8 @@ interface ContadorProps {
 interface ContadorState {
     valor: number
 }
+
+@logRender
 export default class Contador extends Component<ContadorProps, ContadorState> {
 
     public state = { valor: this.props.valorInicial || 0 }
